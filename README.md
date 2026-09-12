@@ -4,6 +4,9 @@ A step-by-step **Retrieval Augmented Generation (RAG)** chatbot that lets you up
 
 ## 🏗️ Architecture
 
+```LIVE : https://ragchatbotgenai.streamlit.app/
+```
+
 ```
 User Question → Embedding → ChromaDB (similarity search) → Relevant Chunks → LLM → Answer
 ```
