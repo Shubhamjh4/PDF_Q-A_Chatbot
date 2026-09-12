@@ -2,8 +2,8 @@
 
 A step-by-step **Retrieval Augmented Generation (RAG)** chatbot that lets you upload any PDF and ask questions about it. Built with **Groq + LangChain + ChromaDB + Streamlit**.
 
-```LIVE : https://ragchatbotgenai.streamlit.app/
-```
+## LIVE : https://ragchatbotgenai.streamlit.app/
+
 
 ## 🏗️ Architecture
 
