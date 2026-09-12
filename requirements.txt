@@ -5,6 +5,8 @@
 
 # --- Core LLM Framework ---
 langchain                  # The main orchestration framework for LLM apps
+langchain-community       # PDF document loaders
+langchain-classic          # Legacy chain constructors
 langchain-groq             # Groq integration (super fast LLM inference)
 langchain-huggingface      # Free embeddings (no API key needed!)
 sentence-transformers      # HuggingFace embeddings runtime dependency
