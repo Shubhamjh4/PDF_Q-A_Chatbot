@@ -112,9 +112,23 @@ if "pdf_processed" not in st.session_state:
 @st.cache_resource
 def get_llm():
     """Create the LLM instance (only once)."""
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        try:
+            api_key = st.secrets["GROQ_API_KEY"]
+        except (KeyError, FileNotFoundError):
+            api_key = None
+
+    if not api_key:
+        raise RuntimeError(
+            "GROQ_API_KEY is missing. Add it to Streamlit Cloud secrets "
+            "or your local .env file."
+        )
+
     return ChatGroq(
         model="openai/gpt-oss-120b",
-        temperature=0
+        temperature=0,
+        api_key=api_key
     )
 
 @st.cache_resource
